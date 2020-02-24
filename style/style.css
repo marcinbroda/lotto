@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 14px/18px Tahoma, Arial, sans-serif;
+}
+
+.drawLots , .yourNumbers , .yuorScore {
+    width: 80%;
+    overflow: hidden;
+    border: none;
+    padding-bottom: 10px;
+}
+
+.drawLots {
+    margin-right:  20px;
+}
+
+.wrapper{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btnReset:focus{
+    outline: none;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.yourNumbersBox .headers{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.box-numbers{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.box-numbers ul li{
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-align: center;
+    padding:8px;
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 5px;
+    background-color: yellow;
+
+}
+
+
+.box-numbers ul .numbers-to-9{
+    padding:8px 12px;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-left: 150px;
+    display: inline-block;
+    
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px #D8D8D8 solid;
+
+    line-height: 1;
+    font-weight: normal;
+    color: #666666;
+}
+
+.btn-drawLots:focus{
+        outline: none;
+}
+
+.btn-drawLots {
+    margin-bottom: 10px;
+    padding: 0 20px;
+    border: none;
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: yellow;
+
+    cursor: pointer;
+
+    font: 14px/40px Tahoma, Arial, sans-serif;
+    color: #426025;
+}
+
+.outputs{
+    font-weight: bold;
+    display: inline-block;
+    width: 260px;
+    height: 40px;
+    padding: 0 20px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #fff;
+
+    font: 20px/40px Tahoma, Arial, sans-serif;
+    text-align: center;
+    color: #3F5263;
+}
+
+
+ .yourNumbers input{
+    max-width: 240px;
+    background-color: yellow;
+    height: 40px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 20px;
+    margin-left: 65px;
+    float: left;
+    border-radius: 10px;
+    font: 20px/40px Tahoma, Arial, sans-serif;
+    text-align: center;
+    color: #3F5263;
+    border: none;
+ }
+
+
+h2  {
+    width: 110px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    margin-bottom: 10px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #fff;
+
+    font: 14px/40px Tahoma, Arial, sans-serif;
+    color: #426025;
+}
+
+.headers-top{
+    width: auto;
+}
+
+/*table*/
+table th{
+    border-right: 1px #595959 solid;
+    background-color: #fff;
+    position: relative;
+    color: grey;
+    border: 1px solid black;
+}
+
+tbody, thead{
+    display: block;
+}
+
+tbody{
+    height: 440px;
+}
+
+#yourMatch{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.getTable{
+    margin-top: 100px;
+
+}
+
+table th,
+table td {
+    width:200px;
+    padding: 10px 20px;
+    text-align: left;
+    height: 20px;
+}
+
+table tr:nth-child(even) td {
+    background-color: #dedede;
+}
+
+table tr:nth-child(odd) td{
+    background-color: #fff;
+} 
+
+
+
+
+@media only screen and (max-width: 768px) {
+                .main{
+                    flex-direction: column;
+                }
+
+                .drawLots, .yourNumbers, .yuorScore{
+                    width: 100%;
+                }
+                 h1{
+                    margin-left: 0px;
+                 }
+                 .drawLots{
+                    margin-right: 0px;
+                 }
+                 .yourNumbers input{
+                    margin-left: 0px;
+                    width: 200px;
+                    display: block;
+                    margin-right: 100px;
+                 }
+
+                 .outputs{
+                    margin-left: 0px;
+                    width: 200px;
+                    display: block;
+                    margin-right: 100px;
+                 }
+                 tbody{
+                    font-size: 10px;
+                 }
+                 table th, table td{
+                    width: 90px;
+                 }
+    }
