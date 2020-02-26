@@ -55,13 +55,14 @@ body {
 .box-numbers ul li{
     cursor: pointer;
     border-radius: 50%;
-    border: 1px solid black;
+    border:none;
     text-align: center;
     padding:8px;
     list-style: none;
     display: inline-block;
     margin-bottom: 5px;
-    background-color: yellow;
+    background-color: #00ff26;
+
 
 }
 
@@ -93,15 +94,33 @@ h1 {
     padding: 0 20px;
     border: none;
     float: left;
-    border: 1px solid black;
     border-radius: 10px;
-    background: yellow;
+    background: #72ec64;
 
     cursor: pointer;
 
     font: 14px/40px Tahoma, Arial, sans-serif;
     color: #426025;
 }
+.luckyLosser{
+    margin-bottom: 10px;
+    padding: 0 20px;
+    border: none;
+    float: left;
+    border-radius: 10px;
+    background: #72ec64;
+
+    cursor: pointer;
+
+    font: 14px/40px Tahoma, Arial, sans-serif;
+    color: #426025;
+ 
+}
+
+.btnReset {
+     background: #d6fbd1 !important;
+ }
+
 
 .outputs{
     font-weight: bold;
@@ -144,7 +163,6 @@ h2  {
     border: none;
     margin-bottom: 10px;
     float: left;
-    border: 1px solid black;
     border-radius: 10px;
     background: #fff;
 
@@ -158,15 +176,16 @@ h2  {
 
 /*table*/
 table th{
-    border-right: 1px #595959 solid;
+    
     background-color: #fff;
     position: relative;
-    color: grey;
-    border: 1px solid black;
+    color: #080808;
+    
 }
 
 tbody, thead{
     display: block;
+    margin-bottom: 20px;
 }
 
 tbody{
@@ -174,8 +193,9 @@ tbody{
 }
 
 #yourMatch{
-    background-color: yellow;
+    background-color: #72ec64;
     cursor: pointer;
+    text-align: center;
 }
 
 .getTable{
@@ -189,14 +209,22 @@ table td {
     padding: 10px 20px;
     text-align: left;
     height: 20px;
+    border-radius: 50px;
+
+}
+
+table tr:first-child td{
+    font-weight: bold;
 }
 
 table tr:nth-child(even) td {
-    background-color: #dedede;
+    background-color: #d6fbd1;
+    color: #000000;
 }
 
 table tr:nth-child(odd) td{
     background-color: #fff;
+    color: #000000;
 } 
 
 
