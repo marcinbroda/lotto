@@ -15,30 +15,48 @@ $(document).ready(function () {
 		lucky = $(".luckyLosser"),
 		luckyNumbers=[];
 		
+		
 
 		allNumbers.on("click", function (e) {
 			var that = $(this),
 				figure;
-					
-			if (counter++ < 6) {
-				that.css("display", "none");
-					figure =that.text();
-					arrayFigure.push(figure);
 
-			}  if (counter === 6){
-				yourNum.val(arrayFigure.toString(" ,"));
-				}
+				lucky.css({
+							"pointer-events": "none",
+							"background": "#ffffff"
+						});
+				
+					if (counter++ < 6) {
+						that.css({
+							"pointer-events": "none",
+							"background": "red"
+						});
+						figure =that.text();
+						arrayFigure.push(figure);
+
+					}  if (counter === 6){
+						yourNum.val(arrayFigure.toString(" ,"));
+						}
+
 			return arrayFigure;	
 		})	
+
 		reset.on("click", function () {
 			
 			counter=0;
-			allNumbers.css("display", "inline-block");	
+			lucky.css({
+					"pointer-events": "auto",
+					"background": "#ffd105"
+				});
+			allNumbers.css({
+					"pointer-events": "auto",
+					"background": "#ffd105"
+				});
 			yourNum.val([]);
 			arrayFigure=[];
 			showNum.val([]);
 			repeatNum.val([]);
-			luckyNumbers.val([]);
+			$(".circle").removeClass("shake");
 
 		})
 
@@ -57,30 +75,27 @@ $(document).ready(function () {
 
 	};
 
+	
+	lucky.on("click", function () {
 
-	lucky.on("click",function () {
-		console.log(lucky);
-		allNumbers.disabled = true;
-		console.log(allNumbers);
-		let luckyNumbers=[];
+		$(".circle").addClass("shake");
+			
+		if(luckyNumbers < 6){
 
-		for ( var i = 0; i < 6; i++){
-			var random = getRandom(1,49);
+			for ( var i = 0; i < 6; i++){
+				var random = getRandom(1,49);
 
 			while(luckyNumbers.indexOf(random) !== -1){
 				var random = getRandom(1,49);
 			}
 
-			luckyNumbers.push(random);
+				luckyNumbers.push(random);
+			}
 		}
-
+				
 		yourNum.val(luckyNumbers.toString(" ,"));
-
+		
 	})
-
-
-
-	
 
 	getNumbers.on("click", function(){
 
@@ -115,7 +130,6 @@ $(document).ready(function () {
 		    }
 		}
 
-
 		repeatNum.val(sameNumbers.toString(" ,"));
 		var tablice = [[yourNumArray],[numbers],[sameNumbers]];
 				//df = $(ducument.createDocumentFragment());	
@@ -125,11 +139,10 @@ $(document).ready(function () {
 			});
 		
 		currentRowIndex++;	
-		console.log(currentRowIndex);	
+		console.log(currentRowIndex);
 
 
-
-		let yourLength = yourNumArray.length;
+			let yourLength = yourNumArray.length;
 		console.log(yourLength);
 
 		function checkRowIndex(){
@@ -140,16 +153,9 @@ $(document).ready(function () {
 			$("tbody tr:last").append("<td></td><td></td><td></td>");		
 			} 
 		}	
-
-		checkRowIndex();
-			 			 
+			checkRowIndex();	 			 
 	});	
-
-
-
-	
-
-																						
+																					
 	$("#yourMatch").on("click", function () {
 		//sprawdz
 		var tbody = $("tbody"),
